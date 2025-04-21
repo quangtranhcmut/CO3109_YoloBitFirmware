@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../esp"
+		},
+		{
+			"name": "esp32_demo",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"esp_system.h": "c",
+			"esp_adc_cal.h": "c",
+			"cmath": "cpp"
+		}
+	}
+}
