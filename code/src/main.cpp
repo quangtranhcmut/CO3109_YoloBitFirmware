@@ -314,14 +314,15 @@ void updateFromFeed() {
         }
         if (subscription == &lThControl) {
             String value3 = (char *)lThControl.lastread;
-            L_TH = (value3.toInt()) * 4096 / 100;
+            // L_TH = (value3.toInt()) * 4096 / 100;
+            L_TH = value3.toInt();
             if (L_TH > H_TH) L_TH = H_TH - 1;
             Serial.print("Low Threshold from Server: ");
             Serial.println(L_TH);
         }
         if (subscription == &hThControl) {
             String value4 = (char *)hThControl.lastread;
-            H_TH = (value4.toInt()) * 4096 / 100;
+            H_TH = value4.toInt();
             if (H_TH < L_TH) H_TH = L_TH + 1;
             Serial.print("High Threshold from Server: ");
             Serial.println(H_TH);
